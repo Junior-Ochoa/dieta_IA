@@ -8,8 +8,8 @@ export const DietaPlanRequestSchema = z.object({
   sexo: z.enum(["masculino", "feminino"]),
   nivel_atividade: z.enum([
     "sedentario",
-    "2x por semana",
-    "4x por semana",
+    "2x_semana",
+    "4x_semana",
     "diariamente",
   ]),
   objetivo: z.enum(["perder_peso", "hipertrofia", "manter_peso"]),
