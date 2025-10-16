@@ -3,16 +3,7 @@
 import { useState } from "react";
 import { DietForm } from "./_components/diet-form";
 import { DietGenerator } from "./_components/diet-generator";
-
-interface DietData {
-  nome: string;
-  idade: number;
-  altura_cm: number;
-  peso_kg: number;
-  sexo: string;
-  nivel_atividade: string;
-  objetivo: string;
-}
+import { DietData } from "@/types/diet-data-type";
 
 export default function Home() {
   const [data, setData] = useState<DietData | null>(null);
@@ -22,6 +13,12 @@ export default function Home() {
   }
 
   return (
-    <>{!data ? <DietForm onSubmit={handleSubmit} /> : <DietGenerator />}</>
+    <>
+      {!data ? (
+        <DietForm onSubmit={handleSubmit} />
+      ) : (
+        <DietGenerator data={data} />
+      )}
+    </>
   );
 }

@@ -63,16 +63,16 @@ export function DietForm({ onSubmit }: DietFormProps) {
         <div className="p-8">
           <div className="text-center mb-8">
             <div className="flex items-center justify-center mb-3 mx-auto">
-              <Utensils className="w-14 h-15 text-green-500" />
+              <Utensils className="w-14 h-15 text-violet-500" />
             </div>
-            <h1 className="text-3xl font-bold text-green-500 mb-2">
+            <h1 className="text-3xl font-bold text-violet-500 mb-2">
               NutriAI - Nutrição Inteligente
             </h1>
           </div>
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
               <div className="space-y-4">
-                <h3 className="text-lg font-semibold text-gray-400 flex items-center">
+                <h3 className="text-lg font-semibold text-gray-500 flex items-center">
                   Dados pessoais
                 </h3>
               </div>
