@@ -22,6 +22,7 @@ export async function* generateDietaPlan(input: DietaPlanRequest) {
     model: "gpt-4o-mini",
     messages: [
       { role: "system", content: buildSystemPrompt() },
+      { role: "system", content: buildDocsSystemPrompt(diretrizes) },
       { role: "user", content: buildUserPrompt(input) },
     ],
     temperature: 0.6,
